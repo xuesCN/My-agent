@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Agent Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- 左侧历史对话边栏 -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>历史对话</h2>
+          <button id="clearHistory" class="clear-history-btn">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+        <div class="history-list" id="historyList">
+          <!-- 历史对话将在JavaScript中动态添加 -->
+        </div>
+        <div class="sidebar-footer">
+          <button id="newConversation" class="new-conversation-btn">
+            <i class="fas fa-plus"></i> 新建会话
+          </button>
+        </div>
+      </aside>
+
+      <!-- 主聊天区域 -->
+      <div class="chat-container">
+        <!-- 头部 -->
+        <header class="header">
+          <div class="header-content">
+            <div class="logo">
+              <i class="fas fa-robot"></i>
+              <h1>AI Agent Assistant</h1>
+            </div>
+            <div class="connection-status">
+              <span class="status-indicator" id="statusIndicator"></span>
+              <span id="statusText">连接中...</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- 聊天消息区域 -->
+        <main class="messages-container">
+          <div class="messages" id="messages">
+            <!-- 系统消息将在JavaScript中动态添加 -->
+          </div>
+        </main>
+
+        <!-- 输入区域 -->
+        <footer class="input-container">
+          <div class="input-wrapper">
+            <textarea
+              id="messageInput"
+              placeholder="在聊天输入框中输入您的问题..."
+              rows="1"
+            ></textarea>
+            <button id="sendButton" class="send-button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="input-hint">
+            <p>点击发送按钮或按 Enter 键发送消息</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
